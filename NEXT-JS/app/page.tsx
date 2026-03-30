@@ -4,7 +4,7 @@ import { GradientBackgroundText } from "@/components/gradient-background-text";
 import { DiscordOnline } from "@/components/discord-online-react";
 import { ClientGrid } from "@/components/client-grid";
 import { ClientMarqueeBlur } from "@/components/client-marquee-blur";
-import { ContributionCalendar } from "@/components/contribution-calendar";
+import { GithubCalendar } from "@/components/contribution-calendar";
 
 const logos = [
   { src: "https://svgl.app/library/nvidia-wordmark-light.svg", alt: "Nvidia" },
@@ -38,7 +38,7 @@ export default function Home() {
         </GradientText>
       </h1>
 
-      <div className="w-full flex flex-col gap-24 mt-10">
+      <div className="w-full flex flex-col gap-24 my-10">
         {/* <section className="w-full relative">
           <ClientMarquee logos={logos} />
         </section> */}
@@ -53,13 +53,13 @@ export default function Home() {
       </div>
 
       <div className="w-full">
-        <ContributionCalendar
-          username="."
+        <GithubCalendar
+          username="torvalds"
           cellSize={14}
           cellGap={3}
           cellShape="rounded"
-          theme="github"
-          showMonthLabels={true}
+          theme="gray"
+          showMonthLabels={false}
           showStats={true}
           showLegend={true}
           className="px-4"

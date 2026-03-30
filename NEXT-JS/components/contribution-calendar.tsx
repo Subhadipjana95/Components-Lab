@@ -26,7 +26,7 @@ export type ThemeColors = {
 
 export type CellShape = "rounded" | "circle"
 
-export type ContributionCalendarProps = {
+export type GithubCalendarProps = {
 
     username?: string // GitHub username 
     data?: ContributionData //Optional - Only for manual data
@@ -265,7 +265,7 @@ function CalendarSkeleton({ cellSize = 12, cellGap = 3, className }: { cellSize?
 
 // ─── Main component ───────────────────────────────────────────────────────────
 
-export const ContributionCalendar = memo(function ContributionCalendar({
+export const GithubCalendar = memo(function GithubCalendar({
     username,
     data: dataProp,
     startDate,
@@ -279,7 +279,7 @@ export const ContributionCalendar = memo(function ContributionCalendar({
     showStats = true,
     showLegend = true,
     className,
-}: ContributionCalendarProps) {
+}: GithubCalendarProps) {
     const id = useId()
     // Scroll ref — used to auto-scroll to most recent months on compact viewports
     const scrollRef = useRef<HTMLDivElement>(null)
@@ -506,7 +506,6 @@ export const ContributionCalendar = memo(function ContributionCalendar({
                                     />
                                 </TooltipTrigger>
                                 <TooltipContent side="top">
-                                    <div className="text-muted-foreground">{tooltip.date}</div>
                                     <div className="font-medium">
                                         {tooltip.label
                                             ? tooltip.label
@@ -516,6 +515,7 @@ export const ContributionCalendar = memo(function ContributionCalendar({
                                                     ? `Level ${data[tooltip.date].level}`
                                                     : "No contributions"}
                                     </div>
+                                    <div className="text-muted">{tooltip.date}</div>
                                 </TooltipContent>
                             </Tooltip>
                         </TooltipProvider>
@@ -560,4 +560,4 @@ export const ContributionCalendar = memo(function ContributionCalendar({
     )
 })
 
-ContributionCalendar.displayName = "ContributionCalendar"
+GithubCalendar.displayName = "GithubCalendar"
