@@ -54,12 +54,12 @@ export default function Home() {
 
       <div className="w-full">
         <GithubCalendar
-          username="torvalds"
+          username="Subhadipjana95"
           cellSize={14}
           cellGap={3}
           cellShape="rounded"
-          theme="gray"
-          showMonthLabels={false}
+          theme="github"
+          showMonthLabels={true}
           showStats={true}
           showLegend={true}
           className="px-4"
