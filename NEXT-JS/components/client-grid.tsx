@@ -16,8 +16,8 @@ const LogoImage = memo(function LogoImage({ logo }: { logo: Logo }) {
     <img
       alt={logo.alt}
       src={logo.src}
-      width={logo.width ?? "auto"}
-      height={logo.height ?? "auto"}
+      width={logo.width}
+      height={logo.height}
       loading="lazy"
       className="pointer-events-none h-4 select-none md:h-5 dark:brightness-0 dark:invert"
     />
