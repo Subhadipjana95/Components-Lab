@@ -8,6 +8,7 @@ import { GithubCalendar } from "@/components/contribution-calendar";
 import { AvatarTooltips } from "@/components/avatar-tooltips";
 import { ICONS } from "@/components/icons";
 import { ThreeDButton } from "@/components/3d-button";
+import { SlidingButton } from "@/components/sliding-button";
 
 const logos = [
   { src: "https://svgl.app/library/nvidia-wordmark-light.svg", alt: "Nvidia" },
@@ -69,9 +70,7 @@ export default function Home() {
           <ClientGrid logos={logos} />
         </section>
 
-        <section className="w-full relative">
-          <ClientMarqueeBlur logos={logos} />
-        </section>
+        
       </div>
 
       <div className="w-full">
@@ -87,13 +86,17 @@ export default function Home() {
           className="px-4"
         />
       </div>
-      </div>
 
       <AvatarTooltips items={TECH_STACK}  />  
 
       <ThreeDButton color1="oklch(79.2% 0.209 151.711)" color2="oklch(42.4% 0.199 265.638)">
         View on GitHub
       </ThreeDButton>
+      </div>
+      
+      <SlidingButton >
+        Get Started
+      </SlidingButton>
     </main>
   );
 }
