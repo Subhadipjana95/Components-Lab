@@ -9,6 +9,10 @@ import { AvatarTooltips } from "@/components/avatar-tooltips";
 import { ICONS } from "@/components/icons";
 import { ThreeDButton } from "@/components/3d-button";
 import { SlidingButton } from "@/components/sliding-button";
+import { DragButton } from "@/components/drag-button";
+import DownloadButton from "@/components/button-download";
+import { PressButton } from "@/components/press-button";
+import { CursorTrail } from "@/components/cursor-trail";
 
 const logos = [
   { src: "https://svgl.app/library/nvidia-wordmark-light.svg", alt: "Nvidia" },
@@ -94,9 +98,18 @@ export default function Home() {
       </ThreeDButton>
       </div>
       
-      <SlidingButton >
+      {/* <SlidingButton >
         Get Started
       </SlidingButton>
+
+      <DragButton>
+        Get Started
+      </DragButton>
+      
+      <PressButton> Button </PressButton> */}
+
+      <CursorTrail />
+
     </main>
   );
 }
