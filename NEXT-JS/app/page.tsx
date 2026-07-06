@@ -1,7 +1,9 @@
-
+"use client";
 
 import { ICONS } from "@/components/icons";
+import { Button } from "@/components/ui/button";
 import Demo from "@/demo/demo";
+import { toast } from "sonner";
 
 const logos = [
   { src: "https://svgl.app/library/nvidia-wordmark-light.svg", alt: "Nvidia" },
@@ -23,7 +25,12 @@ const logos = [
 const TECH_STACK = [
   { id: 1, name: "React", designation: "UI Library", icon: ICONS.React },
   { id: 2, name: "Next.js", designation: "Framework", icon: ICONS.Nextjs },
-  { id: 3, name: "TypeScript", designation: "Language", icon: ICONS.TypeScript },
+  {
+    id: 3,
+    name: "TypeScript",
+    designation: "Language",
+    icon: ICONS.TypeScript,
+  },
   {
     id: 4,
     name: "Tailwind CSS",
@@ -38,9 +45,7 @@ const TECH_STACK = [
 export default function Home() {
   return (
     <main className="flex flex-col flex-1 items-center justify-center font-sans bg-background gap-4 py-20 pb-40 overflow-x-hidden">
-      
-      <Demo/>
-
+      {/* <Demo /> */}
     </main>
   );
 }
