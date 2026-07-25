@@ -1,8 +1,9 @@
-import React from 'react'
+
+import { HighlightedText } from '@/components/highlighted-text'
 
 const Demo = () => {
   return (
-    <div>Demo</div>
+    <div><HighlightedText /></div>
   )
 }
 

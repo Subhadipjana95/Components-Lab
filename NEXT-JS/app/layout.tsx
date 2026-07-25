@@ -3,7 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeToggle } from "@/components/grootstudio/theme-toggler";
+import { ThemeToggler } from "@/components/grootstudio/theme-toggler";
 import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Component Lab - Next.js",
+  title: "Component Lab - Next",
   description: "Lab for testing and creating UI components in Next.js",
 };
 
@@ -42,7 +42,7 @@ export default function RootLayout({
         >
           {children}
           <Toaster position="top-center" />
-          <ThemeToggle />
+          <ThemeToggler />
         </ThemeProvider>
       </body>
     </html>
