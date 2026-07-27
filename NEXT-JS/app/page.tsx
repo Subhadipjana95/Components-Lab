@@ -5,12 +5,16 @@
 import Demo from "@/demo/demo";
 // import { toast } from "sonner";
 
+import dynamic from 'next/dynamic'
+
+const NoSSR = dynamic(() => import('@/demo/demo'), { ssr: false })
+
 
 
 export default function Home() {
   return (
-    <main className="flex flex-col flex-1 items-center justify-center font-sans bg-background gap-4 py-20 pb-40 overflow-x-hidden">
-      <Demo />
+    <main className="h-screen w-full flex flex-col flex-1 items-center justify-center">
+      <NoSSR />
     </main>
   );
 }
